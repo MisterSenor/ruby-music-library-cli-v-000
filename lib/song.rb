@@ -67,10 +67,6 @@ class Song
     end
   end
 
-  def self.create_from_filename(filename)
-      Song.new_from_filename(filename)
-  end
-
   def self.new_from_filename(filename)
       parts = filename.split(" - ")
       song_name = self.find_or_create_by_name(parts[1])
@@ -80,4 +76,8 @@ class Song
       song.name
     end
 
+    def self.create_from_filename(filename)
+        Song.new_from_filename(filename)
+    end
+    
 end
