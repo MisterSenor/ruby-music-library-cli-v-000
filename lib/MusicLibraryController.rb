@@ -51,9 +51,9 @@ class MusicLibraryController
   end
 
   def list_genres
-    artist_array = Artist.all.sort! {|x,y| x.name <=> y.name}
+    artist_array = Genre.all.sort! {|x,y| x.name <=> y.name}
     artist_array.each.with_index(1) do |genre, index|
-      puts "#{index}. #{genre}"
+      puts "#{index}. #{genre.name}"
     end
   end
 
