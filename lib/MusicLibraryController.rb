@@ -77,4 +77,8 @@ class MusicLibraryController
    end
   end
 
+  def play_song
+    puts "Please choose a song:"
+  end
+
 end
