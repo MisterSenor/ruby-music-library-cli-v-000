@@ -42,13 +42,13 @@ class MusicLibraryController
       puts "#{index}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
     end
   end
-    # Song.all.each do |song|
-    #   binding.pry
-    #   song_array = song.sort_by!{}
-    #   song_array.each_with_index do |song, index|
-    #   string = "#{index}. #{ song.name } - #{ song.artist.name } - #{ song.genre.name }"
-    #   puts string
-    #   end
 
+def list_artists  
+  artist_array = Artist.all.sort! {|x,y| x.name <=> y.name}
+  artist_array.each.with_index(1) do |artist, index|
+    puts "#{index}. #{artist.name}"
+  end
+end 
+ 
 
 end
