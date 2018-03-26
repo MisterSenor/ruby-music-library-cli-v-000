@@ -78,10 +78,10 @@ class MusicLibraryController
   end
 
   def play_song
+    list_songs
     puts "Which song number would you like to play?"
-    input = gets.chomp
-    if Song.find_by_name(input)
-      song = Song.find_by_name(input)
+    input = gets.strip.to_i
+    binding.pry
       puts "Playing #{song.name} by #{song.artist.name}"
     end
   end
