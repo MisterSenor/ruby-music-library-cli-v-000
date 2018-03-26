@@ -7,10 +7,10 @@ class Song
 
   def initialize(name, artist = nil, genre = nil)
     @name = name
-    if artist
+    if artist != nil
       self.artist=(artist)
     end
-    if genre
+    if genre != nil
       self.genre=(genre)
     end
     save
@@ -77,7 +77,6 @@ class Song
       artist = Artist.find_or_create_by_name(parts[0])
       genre = Genre.find_or_create_by_name(parts[2].delete ".mp3")
       song = Song.new(song_name, artist, genre)
-      song.name
     end
 
 end
