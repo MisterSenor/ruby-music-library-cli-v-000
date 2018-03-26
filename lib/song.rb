@@ -83,7 +83,7 @@ class Song
       # genre = Genre.find_or_create_by_name(parts[2].delete ".mp3")
       # song = Song.new(song_name, artist, genre)
       # song.name
-      # I don't know why this doesn't work, but it doesn't.  Maybe someone can explain to me why this is buggy? 
+      # I don't know why this doesn't work, but it doesn't.  Maybe someone can explain to me why this is buggy?
       
     end
 
