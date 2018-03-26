@@ -82,7 +82,7 @@ class MusicLibraryController
     input = gets.chomp
     if Song.find_by_name(input)
       song = Song.find_by_name(input)
-      play song
+      puts "Playing #{song.name} by #{song.artist.name}"
     end 
   end
 
